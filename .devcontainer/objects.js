@@ -56,3 +56,35 @@ Object.freeze(user);
 //   }
 */
 
+// **********  FUNCTIONS IN OBJECTS*********
+
+let stu = {
+    name: "abc",
+    course: "aaa",
+    year: "first",
+    grade: function() // function without returning any value
+    {
+        console.log("A");
+
+    },
+
+    add: function() // function returning value
+    {
+        let a= 10;
+        let b =10;
+        return `${a+b} ${this.name}`; // this keyword is used to access the key of current object 
+
+    }
+
+
+
+
+};
+
+console.log(stu.grade); //[Function: grade] The output of console.log(stu.grade) would be a representation of the grade method itself, not its execution. In JavaScript, when you access a method without calling it (i.e., not using parentheses ()), you get a reference to the method itself, rather than its return value.
+
+console.log(stu.grade()); // A undefined <- output now its output will be A because '()' is used but undefined is also coming because function has not returned any value
+
+
+console.log(stu.add()); // 20 abc is te output and undefined is also not coming because return is there. 
+

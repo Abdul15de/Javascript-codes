@@ -44,7 +44,7 @@ console.log(user["full name"]);
 */
 
 //  ***freezing elements of objects
-
+/*
 user["name"] = "Ali";
 console.log(user) // output before freezing
 Object.freeze(user);
@@ -54,5 +54,5 @@ Object.freeze(user);
 //     course: 'btech',
 //     'full name': 'Abdullah Siddqui'
 //   }
-
+*/
 

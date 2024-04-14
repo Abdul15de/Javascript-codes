@@ -38,7 +38,7 @@ console.log(user); // OUTPUT after changing name from Adullah to Ali
 
 console.log(user.name); // Abdullah
 console.log(user["name"]); //Abdullah
-// both output is same but it 2nd one is best practice
+// both output is same but 2nd one is best practice
 console.log(user["full name"]);
 
 */
@@ -47,7 +47,6 @@ console.log(user["full name"]);
 
 user["name"] = "Ali";
 console.log(user) // output before freezing
-Object.freeze(user);
 // {
 //     name: 'Ali',
 //     email: 'abdun9de',
@@ -55,4 +54,15 @@ Object.freeze(user);
 //     'full name': 'Abdullah Siddqui'
 //   }
 
+/*
+Object.freeze(user);
+user["name"] = "Abdullah";
+console.log(user);
+{
+    name: 'Ali',
+    email: 'abdun9de',
+    course: 'btech',
+    'full name': 'Abdullah Siddqui'
+  } // name Abdullah does not change because after freeezing no changes can be done
 
+*/
